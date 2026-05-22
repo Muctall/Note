@@ -1,0 +1,158 @@
+Nodejs.md
+
+# NVM
+
+## Linux/macOS 安装
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+# 或
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```
+
+安装完成后，重新打开终端或运行：
+
+```bash
+#env
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # 加载 nvm
+```
+
+## 基本使用
+
+### 安装 Node.js 版本
+
+```bash
+nvm install <version>  # 安装指定版本
+nvm install node      # 安装最新稳定版
+nvm install --lts     # 安装最新的LTS版本
+```
+
+### 查看已安装版本
+
+```bash
+nvm ls                # 列出所有已安装版本
+nvm ls-remote         # 列出所有远程可用版本
+```
+
+### 切换 Node.js 版本
+
+```bash
+nvm use <version>     # 切换到指定版本
+nvm use --lts         # 切换到最新的LTS版本
+```
+
+### 设置默认版本
+
+```bash
+nvm alias default <version>  # 设置默认版本
+```
+
+### 其他常用命令
+
+```bash
+nvm current           # 显示当前使用的版本
+nvm uninstall <version> # 卸载指定版本
+nvm reinstall-packages <version> # 从旧版本重新安装全局npm包到新版本
+```
+
+### 注意事项
+
+1. 使用 NVM 安装的 Node.js 版本与系统全局安装的版本是分开的
+2. 不同 Node.js 版本间的全局 npm 包不共享
+3. 切换版本后，可能需要重新安装全局包
+4. Windows 版 NVM 与 Linux/macOS 版在命令上有些差异
+
+# NPM
+
+## TypeScript 编译
+
+```bash
+# 安装 TypeScript 和 @vercel/ncc
+npm install -D typescript @vercel/ncc
+npx tsc --version
+npx ncc --version
+npm run build
+```
+
+
+
+Docker.md
+
+# NVM
+
+## Linux/macOS 安装
+
+```bash
+curl -o- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+# 或
+wget -qO- https://raw.githubusercontent.com/nvm-sh/nvm/v0.39.5/install.sh | bash
+```
+
+安装完成后，重新打开终端或运行：
+
+```bash
+#env
+export NVM_DIR="$([ -z "${XDG_CONFIG_HOME-}" ] && printf %s "${HOME}/.nvm" || printf %s "${XDG_CONFIG_HOME}/nvm")"
+[ -s "$NVM_DIR/nvm.sh" ] && \. "$NVM_DIR/nvm.sh" # 加载 nvm
+```
+
+## 基本使用
+
+### 安装 Node.js 版本
+
+```bash
+nvm install <version>  # 安装指定版本
+nvm install node      # 安装最新稳定版
+nvm install --lts     # 安装最新的LTS版本
+```
+
+### 查看已安装版本
+
+```bash
+nvm ls                # 列出所有已安装版本
+nvm ls-remote         # 列出所有远程可用版本
+```
+
+### 切换 Node.js 版本
+
+```bash
+nvm use <version>     # 切换到指定版本
+nvm use --lts         # 切换到最新的LTS版本
+```
+
+### 设置默认版本
+
+```bash
+nvm alias default <version>  # 设置默认版本
+```
+
+### 其他常用命令
+
+```bash
+nvm current           # 显示当前使用的版本
+nvm uninstall <version> # 卸载指定版本
+nvm reinstall-packages <version> # 从旧版本重新安装全局npm包到新版本
+```
+
+### 注意事项
+
+1. 使用 NVM 安装的 Node.js 版本与系统全局安装的版本是分开的
+2. 不同 Node.js 版本间的全局 npm 包不共享
+3. 切换版本后，可能需要重新安装全局包
+4. Windows 版 NVM 与 Linux/macOS 版在命令上有些差异
+
+# NPM
+
+## TypeScript 编译
+
+```bash
+# 安装 TypeScript 和 @vercel/ncc
+npm install -D typescript @vercel/ncc
+npx tsc --version
+npx ncc --version
+npm run build
+```
+
+
+
